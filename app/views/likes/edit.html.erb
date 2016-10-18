@@ -27,14 +27,8 @@
         <%= select_tag(:photo_id, options_from_collection_for_select(Photo.all, :id, :caption, @like.photo_id), :class => "form-control") %>
       </div>
 
-      <!-- Label and input for fan_id -->
-      <div class="form-group">
-        <label for="fan_id" class="control-label">
-          Fan
-        </label>
-
-        <%= select_tag(:fan_id, options_from_collection_for_select(User.all, :id, :email, @like.fan_id), :class => "form-control") %>
-      </div>
+      
+      
 
       <button class="btn btn-warning">
         Update Like
