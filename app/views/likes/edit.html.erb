@@ -33,7 +33,7 @@
           Fan
         </label>
 
-        <input type="text" id="fan_id" name="fan_id" placeholder="Fan" class="form-control" value="<%= @like.fan_id %>">
+        <%= select_tag(:fan_id, options_from_collection_for_select(User.all, :id, :email, @like.fan_id), :class => "form-control") %>
       </div>
 
       <button class="btn btn-warning">
