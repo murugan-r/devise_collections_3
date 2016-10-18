@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :likes,
+             :foreign_key => "fan_id",
+             :dependent => :destroy
+
   has_many   :photos,
              :foreign_key => "owner_id",
              :dependent => :destroy
